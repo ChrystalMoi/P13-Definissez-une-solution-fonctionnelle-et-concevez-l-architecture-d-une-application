@@ -1,0 +1,123 @@
+/* =========================
+  STYLES DE L'INTERUPTEUR (Switch)
+============================ */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #ff3b00;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff3b00;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* =========================
+  STYLES DE LA SECTION PRINCIPALE
+============================ */
+.main-content {
+  padding: 2em;
+  background-color: #f5f5f5;
+}
+
+.main-content h2 {
+  text-align: center;
+  color: #225ec4;
+  margin-bottom: 1.5em;
+}
+
+/* =========================
+  STYLES POUR LES OFFRES (Carte des voitures)
+============================ */
+.car-offers {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+/* Styles des voitures */
+.car-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  text-align: center;
+  width: 300px;
+}
+
+.car-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.car-card h3 {
+  color: #ff3b00;
+  margin: 0.5em 0;
+  font-size: 1.2em;
+}
+
+.car-card .details {
+  font-size: 0.9em;
+  color: #555;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.car-card .description {
+  font-size: 0.9em;
+  color: #333;
+  text-align: justify;
+}
